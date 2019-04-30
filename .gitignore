@@ -1,0 +1,26 @@
+.vagrant
+Berksfile.lock
+Policyfile.lock.json
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+.DS_Store
+.project
+chef_spec.xml
+nodes/*
+chef_guid
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+berks-cookbooks/
+
+.kitchen/
+.kitchen.local.yml
+
+#test kitchen setup
+tmp/

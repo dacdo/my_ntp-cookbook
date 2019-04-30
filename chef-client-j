@@ -1,0 +1,1 @@
+echo '{"my_ntp": { "abc": "333", "xyz": "666" } }' | chef-client -z -j /dev/stdin

@@ -1,0 +1,71 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 13
+  deprecations_as_errors: true
+
+platforms:
+  - name: rhel73-lvm
+    driver:
+      username: root
+      password: passw0rd
+      box_url: file:///opt/coh/boxes/rhel73-lvm-r001.box
+
+  - name: rhel73-nolvm
+    driver:
+      username: root
+      password: passw0rd
+      box_url: file:///opt/coh/boxes/rhel73-nolvm-r001.box
+
+  - name: w2k12r2-std_DE
+    driver:
+      username: root
+      password: packer
+      box_url: file:///opt/coh/boxes/w2k12r2-std_DE-r001.box
+      port: 5985
+      communicator: winrm
+    transport:
+      name: winrm
+      #  elevated: true
+
+  - name: w2k16-std_DE
+    driver:
+      username: root
+      password: packer
+      box_url: file:///opt/coh/boxes/w2k16-std_DE-r001.box
+      port: 5985
+      communicator: winrm
+    transport:
+      name: winrm
+      #  elevated: true
+
+  - name: w2k16-std_core
+    driver:
+      username: root
+      password: packer
+      box_url: file:///opt/coh/boxes/w2k16-std_core-r001.box
+      port: 5985
+      communicator: winrm
+    transport:
+      name: winrm
+      #  elevated: true
+
+  - name: w2k8r2-std_DE
+    driver:
+      username: root
+      password: packer
+      box_url: file:///opt/coh/boxes/w2k8r2-std_DE-r001.box
+      port: 5985
+      communicator: winrm
+    transport:
+      name: winrm
+      #  elevated: true
+
+
+suites:
+  - name: default
+    run_list:
+      - recipe[nab_ntp::default]
