@@ -1,4 +1,3 @@
-# _my_ntp CHANGELOG_
 
 This file is used to list changes made in each version of the my_ntp cookbook.
 

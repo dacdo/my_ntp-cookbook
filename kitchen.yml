@@ -15,7 +15,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[my_ntp::default]
+    #  - recipe[my_ntp::default]
 
     attributes:       
       country:

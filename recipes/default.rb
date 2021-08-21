@@ -19,7 +19,7 @@ service 'ntpd' do
 end
 
 cookbook_file 'ntp.conf' do
-  path '/etc/ntp.conf'
+  path '/tmp/ntp.conf'
   mode 0444
   action :create
   notifies :restart, 'service[ntpd]', :immediately
