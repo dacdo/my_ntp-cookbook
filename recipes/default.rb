@@ -28,6 +28,15 @@ end
 node.default['my_ntp']['pry'] = 'after breakpoint'
 binding.pry
 
+# when stops, it shows pry(#<Chef::recipe>)
+#   enter p node.keys
+#   p node['policy_name']
+#   p node['policy_group']
+#   p node['cookbooks']
+#   p node['my_ntp']['pry']
+#   next
+#   continue
+
 log "after binding = #{node['my_ntp']['pry']}" do
   level :info
 end
