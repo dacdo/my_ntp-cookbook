@@ -20,6 +20,7 @@ log "before binding = #{node['my_ntp']['pry']}" do
   level :info
 end
 
+# service ntpd testing is not done with dokken 
 
 service 'ntpd' do
   action [:enable, :start]
