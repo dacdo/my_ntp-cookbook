@@ -1,0 +1,31 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  data_bags_path: test/integration/data_bags
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: bento/centos-7
+      
+suites:
+  - name: default
+    run_list:
+    #  - recipe[my_ntp::default]
+
+    attributes:       
+      country:
+        state:
+          city: Sydney
+      ntp_servers:
+      - 10.118.43.69
+      - 10.118.43.70
+      resolv_conf:
+        dns_servers:
+        - 10.118.43.98
+        - 10.118.43.99
+      

@@ -26,7 +26,7 @@ service 'ntpd' do
 end
 
 node.default['my_ntp']['pry'] = 'after breakpoint'
-binding.pry
+# binding.pry
 
 # when stops, it shows pry(#<Chef::recipe>)
 #   enter p node.keys
