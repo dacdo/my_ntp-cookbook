@@ -22,7 +22,7 @@ end
 
 # service ntpd testing is not done with dokken 
 
-service 'ntpd' do
+service 'ntp' do
   action [:enable, :start]
 end
 
@@ -46,5 +46,5 @@ cookbook_file 'ntp.conf' do
   path '/tmp/ntp.conf'
   mode 0444
   action :create
-  notifies :restart, 'service[ntpd]', :immediately
+  notifies :restart, 'service[ntp]', :immediately
 end
