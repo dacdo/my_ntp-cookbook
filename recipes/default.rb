@@ -44,7 +44,14 @@ end
 
 cookbook_file 'ntp.conf' do
   path '/tmp/ntp.conf'
-  mode 0444
+  mode '0444'
   action :create
   notifies :restart, 'service[ntp]', :immediately
+end
+
+file '/tmp/abc.txt' do
+  content 'Welcome'
+  mode '0755'
+  owner 'root'
+  group 'root'
 end
