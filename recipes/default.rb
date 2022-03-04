@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: my_ntp
+# Cookbook:: my_ntp
 # Recipe:: default
 #
 
@@ -20,7 +20,7 @@ log "before binding = #{node['my_ntp']['pry']}" do
   level :info
 end
 
-# service ntpd testing is not done with dokken 
+# service ntpd testing is not done with dokken
 
 service 'ntp' do
   action [:enable, :start]

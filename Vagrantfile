@@ -11,5 +11,4 @@ Vagrant.configure('2') do |config|
     n1.vm.hostname = 'n1'
     n1.vm.network 'private_network', ip: '10.42.144.89'
   end
-
 end
